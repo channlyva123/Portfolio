@@ -3,6 +3,7 @@ import FormFieldComponent from "../FromFiledComponent";
 import { formFields } from "@/helpers/formfields.js";
 import ToastComponent from "../ToastComponent";
 import FadeBottom from "@/animations/FadeBotton";
+import Popup from "@/animations/Popup";
 const ContactSectionComponent = () => {
   const [form, setForm] = useState({
     username: "",
@@ -112,11 +113,11 @@ ${form.message}
       {toast.show && (
         <ToastComponent type={toast.type} message={toast.message} />
       )}
-      <FadeBottom delay={200}>
+      <Popup delay={200}>
         <h1 className=' cursor-pointer text-2xl md:text-5xl text-center font-bold text-primary mb-10'>
           Contact
         </h1>
-      </FadeBottom>
+      </Popup>
 
       <FadeBottom delay={300}>
         <div className=' w-full flex justify-center items-center '>

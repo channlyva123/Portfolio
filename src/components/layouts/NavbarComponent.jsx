@@ -16,7 +16,11 @@ const NavbarComponent = () => {
 
   return (
     <FadeTop delay={200}>
-      <Navbar fluid rounded className='w-full bg-white shadow-md py-4 px-6'>
+      <Navbar
+        fluid
+        rounded
+        className='w-full bg-white text-black dark:text-white shadow-md py-4 px-6'
+      >
         {/* Logo */}
         <div className=' flex justify-start items-end w-[150px] cursor-pointer'>
           <Link to={"/home"}>

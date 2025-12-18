@@ -12,7 +12,7 @@ import Contact from "../pages/Contact";
 const Routes = () => {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/home",
       element: <MainLayoutComponent />,
       children: [
         {

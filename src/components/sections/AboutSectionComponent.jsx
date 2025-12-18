@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../../public/images/profile1.png";
+import profile from "/images/profile1.png";
 import Social from "@/components/sections/SocialSectionComponen.jsx";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiUserSettingsFill } from "react-icons/ri";
@@ -13,9 +13,7 @@ import { skills } from "@/helpers/skills";
 import SkillCardComponent from "../SkillCardComponent";
 import EducationSectionComponent from "./EducationSectionComponent";
 import ExperienceSectionComponent from "./ExperienceSectionComponent";
-import FadeRight from "@/animations/FadeRight";
 import FadeLeft from "@/animations/FadeLeft";
-import FadeTop from "@/animations/FadeTop";
 import FadeBottom from "@/animations/FadeBotton";
 import Popup from "@/animations/Popup";
 

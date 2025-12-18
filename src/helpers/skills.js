@@ -1,15 +1,15 @@
-import html from "../../public/images/html-logo.webp";
-import css from "../../public/images/css-logo.webp";
-import javascript from "../../public/images/javascript-logo.webp";
-import tailwind from "../../public/images/tailwind-logo.webp";
-import vue from "../../public/images/vue-logo.webp";
-import intellij from "../../public/images/intellij-logo.webp";
-import vscode from "../../public/images/vscode-logo.webp";
-import github from "../../public/images/github-logo.webp";
-import bootstrap from "../../public/images/bootstrap-logo.webp";
-import react from "../../public/images/react-logo.webp";
-import flask from "../../public/images/flask-logo.webp";
-import laravel from "../../public/images/laravel-logo.webp";
+import html from "/images/html-logo.webp";
+import css from "/images/css-logo.webp";
+import javascript from "/images/javascript-logo.webp";
+import tailwind from "/images/tailwind-logo.webp";
+import vue from "/images/vue-logo.webp";
+import intellij from "/images/intellij-logo.webp";
+import vscode from "/images/vscode-logo.webp";
+import github from "/images/github-logo.webp";
+import bootstrap from "/images/bootstrap-logo.webp";
+import react from "/images/react-logo.webp";
+import flask from "/images/flask-logo.webp";
+import laravel from "/images/laravel-logo.webp";
 export const skills = [
   {
     subject: "HTML",

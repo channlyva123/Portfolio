@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Button,
   Timeline,
   TimelineBody,
   TimelineContent,
@@ -9,7 +8,7 @@ import {
   TimelineTime,
   TimelineTitle,
 } from "flowbite-react";
-import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
+import { HiCalendar } from "react-icons/hi";
 const ExperienceSectionComponent = () => {
   const experiences = [
     {

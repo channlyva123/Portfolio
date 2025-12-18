@@ -18,6 +18,28 @@ import FadeBottom from "@/animations/FadeBotton";
 import Popup from "@/animations/Popup";
 
 const AboutSectionsComponent = () => {
+  const contactInfo = [
+    {
+      icon: <IoPerson className='font-bold text-black' />,
+      label: "Name",
+      value: "Va Channly",
+    },
+    {
+      icon: <FaPhoneAlt className='font-bold text-black' />,
+      label: "Phone",
+      value: "096 82 81 534",
+    },
+    {
+      icon: <MdOutlineAlternateEmail className='font-bold text-black' />,
+      label: "Email",
+      value: "channlyva@gmail.com",
+    },
+    {
+      icon: <MdLocationOn className='font-bold text-black' />,
+      label: "Address",
+      value: "St. Betong, Sangkat Tuek Thla, Khan Sen Sok, Phnom Penh.",
+    },
+  ];
   return (
     <section className='container min-h-screen  p-4 px-6'>
       <Popup delay={200}>
@@ -61,50 +83,23 @@ const AboutSectionsComponent = () => {
             </p>
           </FadeBottom>
           <FadeBottom delay={400}>
-            {/* Information */}
-            <div className=' w-full'>
-              {/* Name */}
-              <div className=' flex justify-start items-center w-full mb-2'>
-                <div className=' flex flex-row items-center w-48 gap-4'>
-                  <IoPerson className=' font-bold text-black' />
-                  <span>Name :</span>
+            <div className='w-full'>
+              {contactInfo.map((item, index) => (
+                <div
+                  key={index}
+                  className='flex justify-between items-center w-full mb-2'
+                >
+                  <div className='flex flex-row items-center w-48 gap-4'>
+                    {item.icon}
+                    <span>{item.label} :</span>
+                  </div>
+                  <div className='ml-6 w-full'>
+                    <span className='text-start md:text-justify'>
+                      {item.value}
+                    </span>
+                  </div>
                 </div>
-                <div className=' ml-6 w-full'>
-                  <span className=' text-start'>Va Channly</span>
-                </div>
-              </div>
-              {/* Phone */}
-              <div className=' flex justify-between items-center w-full mb-2'>
-                <div className=' flex flex-row items-center w-48 gap-4'>
-                  <FaPhoneAlt className=' font-bold text-black' />
-                  <span>Phone :</span>
-                </div>
-                <div className='ml-6 w-full'>
-                  <span className=' text-start'>096 82 81 534</span>
-                </div>
-              </div>
-              {/* Email */}
-              <div className=' flex justify-between items-center w-full mb-2'>
-                <div className=' flex flex-row items-center w-48 gap-4'>
-                  <MdOutlineAlternateEmail className=' font-bold text-black' />
-                  <span>Email :</span>
-                </div>
-                <div className='ml-6 w-full'>
-                  <span className=' text-start'>channlyva@gmail.com</span>
-                </div>
-              </div>
-              {/* Email */}
-              <div className=' flex justify-between items-center w-full mb-2'>
-                <div className=' flex flex-row items-center w-48 gap-4'>
-                  <MdLocationOn className=' font-bold text-black' />
-                  <span>Address :</span>
-                </div>
-                <div className='ml-6 w-full '>
-                  <span className=' text-start md:text-justify'>
-                    St. Betong, Sangkat Tuek Thla, Khan Sen Sok, Phnom Penh.
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
           </FadeBottom>
           <FadeBottom delay={500}>
@@ -121,6 +116,7 @@ const AboutSectionsComponent = () => {
             <div className=' px-4 md:px-6'>
               <SkillBarComponent />
             </div>
+
             {/* Skill Cards */}
             <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-6 my-10'>
               {skills.map((skill, index) => (

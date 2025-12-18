@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, NavbarToggle, NavbarCollapse } from "flowbite-react";
+import { useLocation, NavLink } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
 import FadeTop from "@/animations/FadeTop";
 import logo from "../../../public/images/logo.webp";
@@ -8,6 +9,8 @@ const NavbarComponent = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
+  const isHomeActive =
+    location.pathname === "/" || location.pathname === "/home";
   const menuList = [
     { path: "/home", label: "Home" },
     { path: "/about", label: "About" },

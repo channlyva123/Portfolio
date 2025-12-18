@@ -8,8 +8,6 @@ const NavbarComponent = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  const isHomeActive =
-    location.pathname === "/" || location.pathname === "/home";
   const menuList = [
     { path: "/home", label: "Home" },
     { path: "/about", label: "About" },
@@ -39,13 +37,16 @@ const NavbarComponent = () => {
         {/* Mobile Menu */}
         <NavbarCollapse className={open ? "block" : "hidden"}>
           {menuList.map((menu) => {
-            const isActive = location.pathname === menu.path;
+            const isActive =
+              menu.path === "/home"
+                ? location.pathname === "/" || location.pathname === "/home"
+                : location.pathname === menu.path;
 
             return (
               <Link
                 key={menu.path}
                 to={menu.path}
-                onClick={() => setOpen(false)} // 👈 CLOSE ON CLICK
+                onClick={() => setOpen(false)}
                 className={`px-3 py-2 rounded-md transition-all duration-200 ${
                   isActive
                     ? "text-primary font-semibold"

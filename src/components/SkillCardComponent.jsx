@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import Popup from "@/animations/Popup";
 const SkillCardComponent = ({ skill }) => {
   return (
     <Popup delay={200}>
-      <div className='max-w-[120px] group shadow-xl border py-2 rounded-md border-gray-200 cursor-pointer'>
+      <div className='max-w-[120px] group shadow-xl border py-2 rounded-md border-text cursor-pointer'>
         <div className='w-[50%] h-[50%] m-auto flex justify-center items-center'>
           <img
             src={skill.src}
@@ -12,9 +11,7 @@ const SkillCardComponent = ({ skill }) => {
           />
         </div>
 
-        <p className='hyphens-auto text-center text-gray-400 py-2'>
-          {skill.subject}
-        </p>
+        <p className='hyphens-auto text-center py-2'>{skill.subject}</p>
       </div>
     </Popup>
   );

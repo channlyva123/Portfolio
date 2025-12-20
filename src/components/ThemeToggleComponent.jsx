@@ -5,7 +5,7 @@ export default function ThemeToggleComponent() {
   return (
     <button
       onClick={toggleTheme}
-      className='px-4 py-2 sm:px-2 sm:py-1 text-sm md:text-md bg-primary text-text rounded-full'
+      className='px-4 md:py-2 sm:py-1   text-sm md:text-md bg-primary text-text rounded-full'
     >
       {theme === "light" ? "🌙 Dark" : "☀️ Light"}
     </button>

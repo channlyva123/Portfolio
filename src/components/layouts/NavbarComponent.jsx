@@ -23,7 +23,7 @@ const NavbarComponent = () => {
 
   return (
     <FadeTop delay={200}>
-      <div className='w-full relative container flex justify-between items-center px-4 md:px-7'>
+      <div className='w-full relative container flex justify-between items-center px-4 md:px-7 shadow-md shadow-gray-300'>
         <Navbar className=' w-full text-text bg-bg'>
           {/* Logo */}
           <NavbarBrand as={Link} href='/home' className='flex items-end'>

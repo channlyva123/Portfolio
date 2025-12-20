@@ -41,9 +41,13 @@ const EducationSectionComponent = () => {
           <TimelineItem key={index}>
             <TimelinePoint />
             <TimelineContent>
-              <TimelineTime>{edu.time}</TimelineTime>
-              <TimelineTitle>{edu.school}</TimelineTitle>
-              <TimelineBody className=' text-justify'>
+              <TimelineTime className=' text-text bg-bg'>
+                {edu.time}
+              </TimelineTime>
+              <TimelineTitle className=' text-text bg-bg'>
+                {edu.school}
+              </TimelineTitle>
+              <TimelineBody className=' text-justify text-text bg-bg'>
                 {edu.description}
               </TimelineBody>
             </TimelineContent>

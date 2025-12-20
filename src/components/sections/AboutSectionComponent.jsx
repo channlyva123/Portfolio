@@ -20,28 +20,28 @@ import Popup from "@/animations/Popup";
 const AboutSectionsComponent = () => {
   const contactInfo = [
     {
-      icon: <IoPerson className='font-bold text-black' />,
+      icon: <IoPerson className='font-bold text-text' />,
       label: "Name",
       value: "Va Channly",
     },
     {
-      icon: <FaPhoneAlt className='font-bold text-black' />,
+      icon: <FaPhoneAlt className='font-bold text-text' />,
       label: "Phone",
       value: "096 82 81 534",
     },
     {
-      icon: <MdOutlineAlternateEmail className='font-bold text-black' />,
+      icon: <MdOutlineAlternateEmail className='font-bold text-text' />,
       label: "Email",
       value: "channlyva@gmail.com",
     },
     {
-      icon: <MdLocationOn className='font-bold text-black' />,
+      icon: <MdLocationOn className='font-bold text-text' />,
       label: "Address",
       value: "St. Betong, Sangkat Tuek Thla, Khan Sen Sok, Phnom Penh.",
     },
   ];
   return (
-    <section className='container min-h-screen  p-4 px-6'>
+    <section className='container min-h-screen bg-bg text-text  p-4 px-6'>
       <Popup delay={200}>
         <h1 className=' text-center py-2 text-5xl text-primary font-bold mb-3'>
           About Me
@@ -109,33 +109,33 @@ const AboutSectionsComponent = () => {
           {/* socials */}
         </div>
       </div>
-      <FadeBottom delay={600}>
-        <Tabs aria-label='Default tabs' variant='default'>
-          <TabItem active title='Skills' icon={RiUserSettingsFill}>
-            {/* Skill Bars */}
-            <div className=' px-4 md:px-6'>
-              <SkillBarComponent />
-            </div>
+      <Tabs variant='underline'>
+        <TabItem title='Skills' icon={RiUserSettingsFill}>
+          {/* Skill Bars */}
+          <div className='px-4 md:px-6'>
+            <SkillBarComponent />
+          </div>
 
-            {/* Skill Cards */}
-            <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-6 my-10'>
-              {skills.map((skill, index) => (
-                <SkillCardComponent skill={skill} key={index} />
-              ))}
-            </div>
-          </TabItem>
-          <TabItem title='Educations' icon={MdOutlineCastForEducation}>
-            <div className=' px-4 md:px-6'>
-              <EducationSectionComponent />
-            </div>
-          </TabItem>
-          <TabItem title='Experiences' icon={TbSettingsCog}>
-            <div className=' px-4 md:px-6'>
-              <ExperienceSectionComponent />
-            </div>
-          </TabItem>
-        </Tabs>
-      </FadeBottom>
+          {/* Skill Cards */}
+          <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-6 my-10'>
+            {skills.map((skill, index) => (
+              <SkillCardComponent skill={skill} key={index} />
+            ))}
+          </div>
+        </TabItem>
+
+        <TabItem title='Educations' icon={MdOutlineCastForEducation}>
+          <div className='px-4 md:px-6'>
+            <EducationSectionComponent />
+          </div>
+        </TabItem>
+
+        <TabItem title='Experiences' icon={TbSettingsCog}>
+          <div className='px-4 md:px-6'>
+            <ExperienceSectionComponent />
+          </div>
+        </TabItem>
+      </Tabs>
     </section>
   );
 };

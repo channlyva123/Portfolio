@@ -8,7 +8,7 @@ import Popup from "@/animations/Popup";
 const SkillSectionComponent = () => {
   return (
     <>
-      <section className=' container  w-full min-h-screen bg-white p-4 md:px-6'>
+      <section className=' container  w-full min-h-screen bg-bg text-text p-4 md:px-6'>
         <Popup delay={200}>
           <h1 className=' cursor-pointer text-2xl md:text-4xl text-center font-bold text-primary mb-10'>
             Skills

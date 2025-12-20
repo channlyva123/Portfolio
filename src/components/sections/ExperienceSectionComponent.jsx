@@ -8,7 +8,6 @@ import {
   TimelineTime,
   TimelineTitle,
 } from "flowbite-react";
-import { HiCalendar } from "react-icons/hi";
 const ExperienceSectionComponent = () => {
   const experiences = [
     {
@@ -47,11 +46,15 @@ const ExperienceSectionComponent = () => {
       <Timeline>
         {experiences.map((exp) => (
           <TimelineItem>
-            <TimelinePoint icon={HiCalendar} />
+            <TimelinePoint />
             <TimelineContent>
-              <TimelineTime>{exp.subject}</TimelineTime>
-              <TimelineTitle>{exp.project}</TimelineTitle>
-              <TimelineBody className=' text-justify'>
+              <TimelineTime className=' text-text bg-bg'>
+                {exp.subject}
+              </TimelineTime>
+              <TimelineTitle className=' text-text bg-bg'>
+                {exp.project}
+              </TimelineTitle>
+              <TimelineBody className=' text-justify text-text bg-bg'>
                 {exp.description}
               </TimelineBody>
             </TimelineContent>

@@ -1,8 +1,15 @@
 import React, { useState } from "react";
-import { Navbar, NavbarToggle, NavbarCollapse } from "flowbite-react";
+import {
+  Navbar,
+  NavbarToggle,
+  NavbarCollapse,
+  NavbarBrand,
+} from "flowbite-react";
+
 import { Link, useLocation } from "react-router-dom";
 import FadeTop from "@/animations/FadeTop";
 import logo from "/images/logo.webp";
+import ThemeToggle from "../ThemeToggleComponent";
 
 const NavbarComponent = () => {
   const [open, setOpen] = useState(false);
@@ -16,49 +23,45 @@ const NavbarComponent = () => {
 
   return (
     <FadeTop delay={200}>
-      <Navbar
-        fluid
-        rounded
-        className='w-full bg-white text-black dark:text-white shadow-md py-4 px-6'
-      >
-        {/* Logo */}
-        <div className=' flex justify-start items-end w-[150px] cursor-pointer'>
-          <Link to={"/home"}>
-            <img src={logo} className='md:w-[40px] w-[25px]' alt='logo' />
-          </Link>
-          <Link to={"/home"}>
+      <div className='w-full relative container flex justify-between items-center px-4 md:px-7'>
+        <Navbar className=' w-full text-text bg-bg'>
+          {/* Logo */}
+          <NavbarBrand as={Link} href='/home' className='flex items-end'>
+            <span className='text-5xl font-bold text-primary'>P</span>
             <span className='text-3xl font-bold text-primary'>ortfolio</span>
-          </Link>
-        </div>
+          </NavbarBrand>
 
-        {/* Toggle Button */}
-        <NavbarToggle onClick={() => setOpen(!open)} />
+          {/* <ThemeToggle /> */}
 
-        {/* Mobile Menu */}
-        <NavbarCollapse className={open ? "block" : "hidden"}>
-          {menuList.map((menu) => {
-            const isActive =
-              menu.path === "/home"
-                ? location.pathname === "/" || location.pathname === "/home"
-                : location.pathname === menu.path;
+          <div className='flex md:order-2 gap-3'>
+            <ThemeToggle />
+            <NavbarToggle className=' sm:mr-5' onClick={() => setOpen(!open)} />
+          </div>
+          <NavbarCollapse className={open ? "block" : "hidden"}>
+            {menuList.map((menu) => {
+              const isActive =
+                menu.path === "/home"
+                  ? location.pathname === "/" || location.pathname === "/home"
+                  : location.pathname === menu.path;
 
-            return (
-              <Link
-                key={menu.path}
-                to={menu.path}
-                onClick={() => setOpen(false)}
-                className={`px-3 py-2 rounded-md transition-all duration-200 ${
-                  isActive
-                    ? "text-primary font-semibold"
-                    : "text-gray-700 hover:text-primary"
-                }`}
-              >
-                {menu.label}
-              </Link>
-            );
-          })}
-        </NavbarCollapse>
-      </Navbar>
+              return (
+                <Link
+                  key={menu.path}
+                  to={menu.path}
+                  onClick={() => setOpen(false)}
+                  className={` rounded-md transition-transform ${
+                    isActive
+                      ? "text-primary font-semibold"
+                      : "text-text/80 hover:text-primary"
+                  }`}
+                >
+                  {menu.label}
+                </Link>
+              );
+            })}
+          </NavbarCollapse>
+        </Navbar>
+      </div>
     </FadeTop>
   );
 };

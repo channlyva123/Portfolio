@@ -13,11 +13,21 @@ const FormFieldComponent = ({
 }) => {
   const isTextarea = type === "textarea";
 
+  const baseClasses =
+    "w-full rounded-md p-2 border transition-colors focus:outline-none focus:ring-0";
+
+  const inputClasses = `${baseClasses} border-[rgb(var(--text))]/40 text-[rgb(var(--text))] bg-[rgb(var(--bg))] focus:border-[rgb(var(--primary))]`;
+
   return (
-    <div>
-      <div className='mb-2 block'>
-        <label htmlFor={id}>{label}</label>
-      </div>
+    <div className='mb-4'>
+      {label && (
+        <label
+          htmlFor={id}
+          className='block mb-1 font-medium text-[rgb(var(--text))]'
+        >
+          {label}
+        </label>
+      )}
 
       {isTextarea ? (
         <textarea
@@ -27,7 +37,7 @@ const FormFieldComponent = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className='w-full border border-gray-300 rounded-md p-2 focus:border-primary focus:outline-none focus:ring-0 transition-transform text-justify'
+          className={`${inputClasses} resize-none text-justify`}
         />
       ) : (
         <input
@@ -37,11 +47,13 @@ const FormFieldComponent = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className='w-full border border-gray-300 rounded-md p-2 focus:border-primary focus:outline-none focus:ring-0 transition-transform'
+          className={inputClasses}
         />
       )}
 
-      {error && <span className='text-red-500 text-sm'>{error}</span>}
+      {error && (
+        <span className='text-red-500 text-sm mt-1 block'>{error}</span>
+      )}
     </div>
   );
 };

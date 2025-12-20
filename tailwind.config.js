@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: [
     "./index.html",
@@ -8,17 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FBA002", // custom blue
-        secondary: "#191bdf",
-      },
-      container: {
-        center: true,
-        padding: {
-          sm: "2rem",
-          lg: "3rem",
-          xl: "4rem",
-          "2xl": "5rem",
-        },
+        bg: "rgb(var(--bg))",
+        text: "rgb(var(--text))",
+        primary: "rgb(var(--primary))",
+        card: "rgb(var(--card))",
       },
     },
   },

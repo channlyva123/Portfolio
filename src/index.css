@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------------- LIGHT THEME ---------------- */
+:root {
+  --bg: 255 255 255;
+  --text: 0 0 0;
+  --primary: 251 160 2;
+  --card: 243 244 246;
+}
+
+/* ---------------- DARK THEME ---------------- */
+[data-theme="dark"] {
+  --bg: 15 23 42;
+  --text: 255 255 255;
+  --primary: 251 160 2;
+  --card: 30 41 59;
+}
+
+/* ---------------- GLOBAL ELEMENTS ---------------- */
 body {
-  background-color: #f9f8f6;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+/* Flowbite override */
+.navbar,
+.navbar a,
+.navbar button {
+  background-color: rgb(var(--bg)) !important;
+  color: rgb(var(--text)) !important;
+}
+
+.button-primary {
+  background-color: rgb(var(--primary));
+  color: rgb(var(--text));
+  transition: all 0.25s ease;
+}
+
+.card {
+  background-color: rgb(var(--card));
+  color: rgb(var(--text));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease;
 }

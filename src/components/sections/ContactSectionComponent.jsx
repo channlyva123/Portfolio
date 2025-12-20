@@ -114,7 +114,7 @@ ${form.message}
         <ToastComponent type={toast.type} message={toast.message} />
       )}
       <Popup delay={200}>
-        <h1 className=' cursor-pointer text-2xl md:text-5xl text-center font-bold text-primary mb-10'>
+        <h1 className=' cursor-pointer text-2xl md:text-5xl text-center font-bold text-primary mb-5'>
           Contact
         </h1>
       </Popup>
@@ -122,7 +122,7 @@ ${form.message}
       <FadeBottom delay={300}>
         <div className=' w-full flex justify-center items-center '>
           <form
-            className='flex w-[70%] flex-col gap-4 border bg-white border-gray-300 rounded-md shadow-md  p-4 md:p-6 '
+            className='flex w-full md:w-[70%] flex-col gap-4 border border-text bg-bg rounded-md shadow-md  p-4 md:p-6 '
             onSubmit={handleSubmit}
           >
             <h1 className=' text-xl font-bold text-center'>Contact Form</h1>
@@ -146,7 +146,7 @@ ${form.message}
             <button
               type='submit'
               disabled={loading}
-              className='bg-primary text-white p-2 rounded hover:opacity-90 transition disabled:opacity-60'
+              className='bg-primary text-text p-2 rounded hover:opacity-90 transition disabled:opacity-60'
             >
               {loading ? "Sending..." : "Submit"}
             </button>

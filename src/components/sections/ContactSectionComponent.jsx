@@ -122,7 +122,7 @@ ${form.message}
       <FadeBottom delay={300}>
         <div className=' w-full flex justify-center items-center '>
           <form
-            className='flex w-full md:w-[70%] flex-col gap-4 border border-text bg-bg rounded-md shadow-md  p-4 md:p-6 '
+            className='flex w-full md:w-[70%] flex-col gap-4 border border-[rgb(var(--text))]/20 bg-bg rounded-md shadow-md  p-4 md:p-6 '
             onSubmit={handleSubmit}
           >
             <h1 className=' text-xl font-bold text-center'>Contact Form</h1>

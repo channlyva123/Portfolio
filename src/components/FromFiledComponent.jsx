@@ -16,7 +16,7 @@ const FormFieldComponent = ({
   const baseClasses =
     "w-full rounded-md p-2 border transition-colors focus:outline-none focus:ring-0";
 
-  const inputClasses = `${baseClasses} border-[rgb(var(--text))]/40 text-[rgb(var(--text))] bg-[rgb(var(--bg))] focus:border-[rgb(var(--primary))]`;
+  const inputClasses = `${baseClasses} border-[rgb(var(--text))]/30 text-[rgb(var(--text))] bg-[rgb(var(--bg))] focus:border-[rgb(var(--primary))]`;
 
   return (
     <div className='mb-4'>

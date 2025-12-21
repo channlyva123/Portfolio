@@ -8,7 +8,6 @@ import {
 
 import { Link, useLocation } from "react-router-dom";
 import FadeTop from "@/animations/FadeTop";
-import logo from "/images/logo.webp";
 import ThemeToggle from "../ThemeToggleComponent";
 
 const NavbarComponent = () => {
@@ -23,8 +22,8 @@ const NavbarComponent = () => {
 
   return (
     <FadeTop delay={200}>
-      <div className='w-full relative container flex justify-between items-center px-4 md:px-7 shadow-md shadow-gray-300'>
-        <Navbar className=' w-full text-text bg-bg'>
+      <div className=' min-w-full relative container flex justify-between items-center px-4 md:px-7 shadow-md shadow-gray-300'>
+        <Navbar className=' min-w-full text-text bg-bg'>
           {/* Logo */}
           <NavbarBrand as={Link} href='/home' className='flex items-end'>
             <span className='text-5xl font-bold text-primary'>P</span>

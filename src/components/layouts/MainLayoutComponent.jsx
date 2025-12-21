@@ -7,7 +7,7 @@ const MainLayoutComponent = () => {
   return (
     <>
       <HeaderComponent></HeaderComponent>
-      <main className=' container min-h-screen'>
+      <main className=' container min-w-full min-h-screen'>
         <Outlet></Outlet>
       </main>
       <FooterComponent></FooterComponent>

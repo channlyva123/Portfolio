@@ -109,7 +109,7 @@ ${form.message}
   };
 
   return (
-    <section className=' container  w-full min-h-screen p-4 md:px-7'>
+    <section className=' container min-w-full min-h-screen p-4 md:px-7'>
       {toast.show && (
         <ToastComponent type={toast.type} message={toast.message} />
       )}

@@ -41,7 +41,7 @@ const AboutSectionsComponent = () => {
     },
   ];
   return (
-    <section className='container min-h-screen bg-bg text-text  p-4 px-6'>
+    <section className='container min-h-screen min-w-full bg-bg text-text  p-4 px-6'>
       <Popup delay={200}>
         <h1 className=' text-center py-2 text-5xl text-primary font-bold mb-3'>
           About Me

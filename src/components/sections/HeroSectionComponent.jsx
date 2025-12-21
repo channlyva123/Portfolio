@@ -65,7 +65,7 @@ const HeroSectionComponent = () => {
             </FadeLeft>
 
             <FadeLeft delay={400}>
-              <div className='flex flex-col sm:flex-row gap-4'>
+              <div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-4'>
                 <a
                   href='/files/resume.pdf'
                   download='Va_Channly_Resume.pdf'
@@ -107,7 +107,11 @@ const HeroSectionComponent = () => {
                 </Link>
               </div>
             </FadeLeft>
-            <Socials />
+            <FadeLeft delay={500}>
+              <div className=' w-full flex justify-center lg:justify-start'>
+                <Socials />
+              </div>
+            </FadeLeft>
           </div>
 
           {/* Right: Profile Image */}

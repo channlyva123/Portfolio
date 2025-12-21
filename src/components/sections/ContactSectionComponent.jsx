@@ -22,8 +22,6 @@ const ContactSectionComponent = () => {
   const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_TOKEN;
   const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
-  console.log(BOT_TOKEN, CHAT_ID);
-
   const validate = () => {
     const newErrors = {};
 

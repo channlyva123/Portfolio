@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import profile from "/images/profile.png";
 import Typing from "@/animations/typing.jsx";
 import FadeRight from "@/animations/FadeRight";

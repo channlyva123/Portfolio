@@ -76,9 +76,9 @@ const AboutSectionsComponent = () => {
           <FadeBottom delay={300}>
             {/* description */}
             <p className=' text-justify py-2 mb-2 md:mb-5'>
-              I am a Front-End Developer who is always eager to learn new
-              technologies and improve my skills. I am committed to contributing
-              to the company’s growth while performing my responsibilities with
+              I am a Web Developer who is always eager to learn new technologies
+              and improve my skills. I am committed to contributing to the
+              company’s growth while performing my responsibilities with
               dedication and respect for my team.
             </p>
           </FadeBottom>

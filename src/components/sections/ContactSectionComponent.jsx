@@ -133,14 +133,6 @@ ${form.message}
                 error={errors[field.name]}
               />
             ))}
-            <div className=''>
-              <div className='mb-2 block'>
-                <p>
-                  Your message will be send to my telegram by telegram bot. I
-                  will try to reply your message as soon as possible.
-                </p>
-              </div>
-            </div>
             <button
               type='submit'
               disabled={loading}

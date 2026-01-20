@@ -10,6 +10,9 @@ import bootstrap from "/images/bootstrap-logo.webp";
 import react from "/images/react-logo.webp";
 import flask from "/images/flask-logo.webp";
 import laravel from "/images/laravel-logo.webp";
+import spring from "/images/springboot-logo.webp";
+import typeScript from "/images/typescript-logo.webp";
+import mySql from "/images/mysql-logo.webp";
 export const skills = [
   {
     subject: "HTML",
@@ -25,6 +28,11 @@ export const skills = [
     subject: "JavaScript",
     percent: 60,
     src: javascript,
+  },
+  {
+    subject: "TypeScript",
+    percent: 60,
+    src: typeScript,
   },
   {
     subject: "Tailwind CSS",
@@ -48,6 +56,7 @@ export const skills = [
   },
   { subject: "Flask", percent: 70, src: flask },
   { subject: "Laravel", percent: 70, src: laravel },
+  { subject: "Spring Boot", percent: 50, src: spring },
   {
     subject: "Github",
     percent: 50,
@@ -60,7 +69,12 @@ export const skills = [
   },
   {
     subject: "Intellij",
-    percent: 60,
+    percent: 50,
     src: intellij,
+  },
+  {
+    subject: "MySQL",
+    percent: 70,
+    src: mySql,
   },
 ];

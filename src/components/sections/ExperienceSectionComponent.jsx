@@ -30,8 +30,8 @@ const ExperienceSectionComponent = () => {
     },
     {
       subject: "PYTHON PROGRAMMING - SUBJECT",
-      project: "ECOMMERCE WEBSITE",
-      description: `E-commerce Website Implemented with Flask, Bootstrap, and
+      project: "ECOMMERCE",
+      description: `E-commerce Implemented with Flask, Bootstrap, and
                      Vue-JS. Designed a responsive shopping interface, integrated Telegram bot notifications and email checkout alerts.  `,
     },
     {
@@ -39,6 +39,12 @@ const ExperienceSectionComponent = () => {
       project: "ECOMMERCE WEBSITE",
       description: `E-commerce Midterm Project Developed using React-JS, Redux, and Tailwind CSS with static data.  
                     Built a fully responsive front-end with reusable components.`,
+    },
+    {
+      subject: "JAVA",
+      project: "CRUD",
+      description:
+        "Built CRUD APIs using Spring Boot and JPA Worked with MySQL database and entity mapping Tested REST APIs with Postman",
     },
   ];
   return (

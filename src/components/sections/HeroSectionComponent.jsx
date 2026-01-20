@@ -44,10 +44,7 @@ const HeroSectionComponent = () => {
                 <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-2'>
                   I am a{" "}
                   <span className='relative inline-block'>
-                    <Typing
-                      text={"Front-End Developer"}
-                      className='text-primary'
-                    />
+                    <Typing text={"Web Developer"} className='text-primary' />
                     <span className='absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-primary/50'></span>
                   </span>
                 </h2>
@@ -56,18 +53,19 @@ const HeroSectionComponent = () => {
 
             <FadeLeft delay={350}>
               <p className='text-lg md:text-xl text-white mb-8 leading-relaxed'>
-                Passionate Front-End Developer dedicated to creating exceptional
-                user experiences. Always eager to embrace new technologies and
-                enhance my skill set. Committed to driving company growth
-                through dedicated collaboration and innovative solutions.
+                Passionate Web Developer with a strong focus on building
+                scalable and user-friendly web applications. Continuously
+                learning new technologies to improve development efficiency and
+                code quality. Dedicated to contributing to organizational
+                success through teamwork and innovative problem-solving.
               </p>
             </FadeLeft>
 
             <FadeLeft delay={400}>
               <div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-4'>
                 <a
-                  href='/files/resume.pdf'
-                  download='Va_Channly_Resume.pdf'
+                  href='/files/VA_CHANNLY.pdf'
+                  download='Va_Channly.pdf'
                   className='group inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 hover:bg-primary/90'
                 >
                   <svg
